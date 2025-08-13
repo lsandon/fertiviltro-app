@@ -111,10 +111,7 @@ const verifyAdmin = (req, res, next) => {
 
 // --- User Authentication and Management ---
 
-// Root route
-app.get('/', (req, res) => {
-    res.send('Backend de Fertilvitro funcionando con JSON!');
-});
+
 
 // --- User Authentication and Management ---
 
