@@ -84,6 +84,11 @@ app.use(cors({ origin: '*' }));
 // Sirve archivos estáticos desde el directorio raíz del proyecto
 app.use(express.static(path.join(__dirname, '..')));
 
+// Ruta explícita para servir index.html en la raíz
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'index.html'));
+});
+
 // Middleware to authenticate JWT token
 const authenticateToken = (req, res, next) => {
     const authHeader = req.headers['authorization'];
