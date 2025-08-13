@@ -81,13 +81,8 @@ async function calculateClientStatus(clientId) {
 app.use(express.json());
 app.use(cors({ origin: '*' }));
 
-// Servir archivos estáticos desde la raíz del proyecto
-app.use(express.static(path.join(__dirname, '..')));
-
-// Ruta explícita para servir index.html en la raíz
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'index.html'));
-});
+// Servir archivos estáticos desde la carpeta 'public'
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Middleware to authenticate JWT token
 const authenticateToken = (req, res, next) => {
