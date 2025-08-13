@@ -81,12 +81,12 @@ async function calculateClientStatus(clientId) {
 app.use(express.json());
 app.use(cors({ origin: '*' }));
 
-// Sirve archivos estáticos desde el directorio raíz del proyecto, que en Railway es __dirname
-app.use(express.static(__dirname));
+// Servir archivos estáticos desde la raíz del proyecto
+app.use(express.static(path.join(__dirname, '..')));
 
 // Ruta explícita para servir index.html en la raíz
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, '..', 'index.html'));
 });
 
 // Middleware to authenticate JWT token
