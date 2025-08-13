@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.sidebar-nav a');
     const contentSections = document.querySelectorAll('.content-section');
 
-    const BASE_URL = 'http://localhost:3000/api';
+    const BASE_URL = 'https://fertiviltro-app-production.up.railway.app/api';
 
     // Helper para añadir el encabezado de autorización
     const getAuthHeaders = () => ({

@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const editStageRealDate = document.getElementById('edit-stage-real-date');
     const editStageObservations = document.getElementById('edit-stage-observations');
 
-    const BASE_URL = 'http://localhost:3000/api';
+    const BASE_URL = 'https://fertiviltro-app-production.up.railway.app/api';
 
     const loggedInUser = JSON.parse(localStorage.getItem('user'));
 

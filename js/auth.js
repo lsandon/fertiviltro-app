@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('login-form');
     const errorMessage = document.getElementById('error-message');
 
-    const BASE_URL = 'http://localhost:3000/api'; // URL base de tu API backend
+    const BASE_URL = 'https://fertiviltro-app-production.up.railway.app/api'; // URL base de tu API backend
 
     loginForm.addEventListener('submit', async (e) => {
         e.preventDefault();

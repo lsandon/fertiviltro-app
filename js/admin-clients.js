@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const errorMessage = document.getElementById('error-message');
     const searchInput = document.getElementById('search');
 
-    const BASE_URL = 'http://localhost:3000/api';
+    const BASE_URL = 'https://fertiviltro-app-production.up.railway.app/api';
 
     const loggedInUser = JSON.parse(localStorage.getItem('user'));
 

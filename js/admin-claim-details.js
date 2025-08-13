@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const responseForm = document.getElementById('response-form');
     const errorMessage = document.getElementById('error-message');
 
-    const BASE_URL = 'http://localhost:3000/api';
+    const BASE_URL = 'https://fertiviltro-app-production.up.railway.app/api';
 
     const loggedInUser = JSON.parse(localStorage.getItem('user'));
 

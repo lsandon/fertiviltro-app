@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const receptoraObservacionesInput = document.getElementById('receptora-observaciones');
     const closeReceptoraModalBtn = receptoraModal.querySelector('.close-button');
 
-    const BASE_URL = 'http://localhost:3000/api';
+    const BASE_URL = 'https://fertiviltro-app-production.up.railway.app/api';
 
     const loggedInUser = JSON.parse(localStorage.getItem('user'));
 

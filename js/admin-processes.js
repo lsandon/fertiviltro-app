@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const createProcessForm = document.getElementById('create-process-form');
     const processClientSelect = document.getElementById('process-client');
 
-    const BASE_URL = 'http://localhost:3000/api';
+    const BASE_URL = 'https://fertiviltro-app-production.up.railway.app/api';
 
     const loggedInUser = JSON.parse(localStorage.getItem('user'));
 
