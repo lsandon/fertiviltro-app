@@ -81,20 +81,12 @@ async function calculateClientStatus(clientId) {
 app.use(express.json());
 app.use(cors({ origin: '*' }));
 
-// Sirve archivos estáticos desde el directorio raíz del proyecto
-app.use(express.static(path.join(__dirname, '..')));
+// Sirve archivos estáticos desde el directorio raíz del proyecto, que en Railway es __dirname
+app.use(express.static(__dirname));
 
 // Ruta explícita para servir index.html en la raíz
 app.get('/', (req, res) => {
-    const indexPath = path.join(__dirname, '..', 'index.html');
-    console.log(`Intentando servir index.html desde la ruta: ${indexPath}`);
-
-    res.sendFile(indexPath, (err) => {
-        if (err) {
-            console.error('ERROR AL ENVIAR index.html:', err);
-            res.status(404).send('Not Found'); // Enviar un 404 si no se encuentra
-        }
-    });
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Middleware to authenticate JWT token
