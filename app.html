@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fertilvitro - Cliente</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Fertilvitro Cliente</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#" data-section="dashboard">Dashboard</a></li>
+                    <li><a href="#" data-section="procesos">Mis Procesos</a></li>
+                    <li><a href="#" data-section="reclamaciones">Mis Reclamaciones</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" id="logout-btn">Cerrar Sesión</a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <div id="dashboard-section" class="content-section">
+                <div class="section-header">
+                    <h1>Bienvenido, <span id="username-display"></span>!</h1>
+                </div>
+                <p>Aquí tienes un resumen de tu actividad y el estado de tus procesos.</p>
+
+                <!-- 1. Tarjetas de Resumen (KPIs) -->
+                <div id="kpi-card-container" class="kpi-cards">
+                    <!-- Las tarjetas se generarán aquí -->
+                </div>
+
+                <!-- 2. Estado Detallado del Proceso -->
+                <div id="detailed-process-status" class="process-status-container">
+                    <!-- El estado detallado se generará aquí -->
+                </div>
+
+                <!-- 3. Historial y Acciones -->
+                <div class="dashboard-columns">
+                    <div class="activity-history-container">
+                        <h2>Actividad Reciente</h2>
+                        <ul id="activity-history-list" class="activity-list">
+                            <!-- El historial se generará aquí -->
+                        </ul>
+                    </div>
+                    <div class="quick-actions-container">
+                        <h2>Acciones Rápidas</h2>
+                        <div id="action-buttons" class="action-buttons">
+                            <!-- Los botones se generarán aquí -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="procesos-section" class="content-section" style="display:none;">
+                <h2>Mis Procesos</h2>
+                <div id="processes-container" class="processes-grid">
+                    <!-- Los procesos se cargarán aquí dinámicamente -->
+                </div>
+            </div>
+
+            <div id="reclamaciones-section" class="content-section" style="display:none;">
+                <h2>Mis Reclamaciones</h2>
+                <button id="create-claim-btn" class="btn btn-primary mb-3">Crear Nuevo Reclamo</button>
+                <div id="claims-container">
+                    <!-- Los reclamos se cargarán aquí -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal para crear reclamo -->
+    <div id="claim-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Crear un Reclamo</h3>
+            <form id="claim-form">
+                <div class="form-group">
+                    <label for="claim-subject">Motivo del Reclamo</label>
+                    <select id="claim-subject" required>
+                        <option value="" disabled selected>Seleccione un motivo...</option>
+                        <option value="Calidad del embrión">Calidad del embrión</option>
+                        <option value="Retraso en entrega">Retraso en entrega</option>
+                        <option value="Problemas con sincronización">Problemas con sincronización</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="claim-description">Descripción</label>
+                    <textarea id="claim-description" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar Reclamo</button>
+            </form>
+        </div>
+    </div>
+
+    
+    <script src="js/app.js"></script>
+</body>
+</html>

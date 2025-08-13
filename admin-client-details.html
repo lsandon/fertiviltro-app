@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Cliente</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Panel de Admin</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="/admin.html">Dashboard</a></li>
+                    <li><a href="/admin-users.html">Usuarios</a></li>
+                    <li><a href="/admin-clients.html" class="active">Clientes</a></li>
+                    <li><a href="/admin-processes.html">Procesos</a></li>
+                    <li><a href="/admin-claims.html">Reclamaciones</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="/index.html" id="logout-btn">Cerrar Sesión</a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <a href="/admin-clients.html">Volver a Clientes</a>
+            <h1 id="client-name"></h1>
+            <div id="error-message"></div>
+
+            <h2>Información del Cliente</h2>
+            <div id="client-info"></div>
+
+            <h2>Donadoras</h2>
+            <button id="add-donadora-btn" class="btn btn-sm">Añadir Donadora</button>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Raza</th>
+                        <th>Edad</th>
+                        <th>Historial</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="donadoras-list"></tbody>
+            </table>
+
+            <h2>Receptoras</h2>
+            <button id="add-receptora-btn" class="btn btn-sm">Añadir Receptora</button>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Código/ID</th>
+                        <th>Observaciones</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="receptoras-list"></tbody>
+            </table>
+
+            <h2>Procesos</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="process-list"></tbody>
+            </table>
+        </main>
+    </div>
+
+    <!-- Modal para Añadir/Editar Donadora -->
+    <div id="donadora-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 id="donadora-modal-title">Añadir Donadora</h3>
+            <form id="donadora-form">
+                <input type="hidden" id="donadora-id">
+                <div class="form-group">
+                    <label for="donadora-codigo">Código/Nombre</label>
+                    <input type="text" id="donadora-codigo" required>
+                </div>
+                <div class="form-group">
+                    <label for="donadora-raza">Raza</label>
+                    <input type="text" id="donadora-raza" required>
+                </div>
+                <div class="form-group">
+                    <label for="donadora-edad">Edad</label>
+                    <input type="number" id="donadora-edad" required>
+                </div>
+                <div class="form-group">
+                    <label for="donadora-historial">Historial</label>
+                    <textarea id="donadora-historial" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn">Guardar Donadora</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal para Añadir/Editar Receptora -->
+    <div id="receptora-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 id="receptora-modal-title">Añadir Receptora</h3>
+            <form id="receptora-form">
+                <input type="hidden" id="receptora-id">
+                <div class="form-group">
+                    <label for="receptora-codigo">Código/ID Interno</label>
+                    <input type="text" id="receptora-codigo" required>
+                </div>
+                <div class="form-group">
+                    <label for="receptora-observaciones">Observaciones</label>
+                    <textarea id="receptora-observaciones" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn">Guardar Receptora</button>
+            </form>
+        </div>
+    </div>
+
+    
+    <script src="/js/admin-client-details.js"></script>
+</body>
+</html>

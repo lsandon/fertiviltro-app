@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "cliente_id": 5,
+    "asunto": "Calidad del embrión",
+    "motivo": "Calidad del embrión",
+    "estado": "Respondido",
+    "fecha_creacion": "2025-07-29T23:34:48.137Z",
+    "observaciones": "La calidad del embrion no ha alcanzado la esperada",
+    "respuesta": "La plata"
+  }
+]

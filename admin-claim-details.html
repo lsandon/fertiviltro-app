@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de Reclamación</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Panel de Admin</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="/admin.html">Dashboard</a></li>
+                    <li><a href="/admin-users.html">Usuarios</a></li>
+                    <li><a href="/admin-clients.html">Clientes</a></li>
+                    <li><a href="/admin-processes.html">Procesos</a></li>
+                    <li><a href="/admin-claims.html" class="active">Reclamaciones</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="/index.html" id="logout-btn">Cerrar Sesión</a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <a href="/admin-claims.html">Volver a Reclamaciones</a>
+            <h1>Detalles de Reclamación</h1>
+            <div id="error-message"></div>
+
+            <div id="claim-info"></div>
+
+            <h2>Respuesta</h2>
+            <form id="response-form">
+                <div class="form-group">
+                    <label for="response">Respuesta</label>
+                    <textarea id="response" name="response" rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar Respuesta</button>
+            </form>
+        </main>
+    </div>
+    
+    <script src="/js/admin-claim-details.js"></script>
+</body>
+</html>

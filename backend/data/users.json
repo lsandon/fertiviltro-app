@@ -1,0 +1,12 @@
+[
+  {
+    "username": "admin",
+    "password": "$2a$10$CC8fIQGyP1vwcKDTRjrUNOzx3FV7lpCS5ilYftBeJb.GEVi0ON8om",
+    "role": "admin"
+  },
+  {
+    "username": "ganadero",
+    "password": "$2a$10$r5RLkppRugEK9goHl6BE1uqGHPFXAm8ubgfNOXXrUX3YfsER8/n2O",
+    "role": "client"
+  }
+]

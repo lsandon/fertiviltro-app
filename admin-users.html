@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Usuarios</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Panel de Admin</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="/admin.html">Dashboard</a></li>
+                    <li><a href="/admin-users.html" class="active">Usuarios</a></li>
+                    <li><a href="/admin-clients.html">Clientes</a></li>
+                    <li><a href="/admin-processes.html">Procesos</a></li>
+                    <li><a href="/admin-claims.html">Reclamaciones</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="/index.html" id="logout-btn">Cerrar Sesión</a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <h1>Panel de Administración - Usuarios</h1>
+            <div id="error-message"></div>
+            <h2>Usuarios</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre de Usuario</th>
+                        <th>Rol</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="user-list"></tbody>
+            </table>
+
+            <h2>Crear Usuario</h2>
+            <form id="user-form">
+                <div class="form-group">
+                    <label for="username">Nombre de Usuario</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="role">Rol</label>
+                    <select id="role" name="role">
+                        <option value="client">Cliente</option>
+                        <option value="admin">Administrador</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Crear Usuario</button>
+            </form>
+        </main>
+    </div>
+    
+    <script src="/js/admin-users.js"></script>
+</body>
+</html>

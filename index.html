@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fertilvitro - Iniciar Sesión</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Fertilvitro</h2>
+            <p>Gestión de Procesos Ganaderos</p>
+            <form id="login-form">
+                <div class="input-group">
+                    <input type="text" id="username" name="username" required>
+                    <label for="username">Usuario</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" name="password" required>
+                    <label for="password">Contraseña</label>
+                </div>
+                <button type="submit">Ingresar</button>
+                <p id="error-message" class="error-message"></p>
+            </form>
+        </div>
+    </div>
+    
+    <script src="js/auth.js"></script>
+</body>
+</html>

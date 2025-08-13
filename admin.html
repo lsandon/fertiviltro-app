@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Panel de Admin</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="/admin.html" class="active">Dashboard</a></li>
+                    <li><a href="/admin-users.html">Usuarios</a></li>
+                    <li><a href="/admin-clients.html">Clientes</a></li>
+                    <li><a href="/admin-processes.html">Procesos</a></li>
+                    <li><a href="/admin-claims.html">Reclamaciones</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" id="logout-btn">Cerrar Sesión</a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <h1>Dashboard de Administración</h1>
+            <div id="error-message"></div>
+
+            <div class="kpi-cards">
+                <div class="card">
+                    <h3>Total Clientes</h3>
+                    <p id="total-clients-kpi">0</p>
+                </div>
+                <div class="card">
+                    <h3>Procesos Activos</h3>
+                    <p id="active-processes-kpi">0</p>
+                </div>
+                <div class="card">
+                    <h3>Reclamaciones Abiertas</h3>
+                    <p id="open-claims-kpi">0</p>
+                </div>
+                <div class="card">
+                    <h3>Procesos Pendientes</h3>
+                    <p id="pending-processes-kpi">0</p>
+                </div>
+                <div class="card">
+                    <h3>Procesos En Proceso</h3>
+                    <p id="in-progress-processes-kpi">0</p>
+                </div>
+                <div class="card">
+                    <h3>Procesos Completados</h3>
+                    <p id="completed-processes-kpi">0</p>
+                </div>
+                <div class="card">
+                    <h3>Procesos Cancelados</h3>
+                    <p id="cancelled-processes-kpi">0</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <h2>Distribución de Estado de Procesos</h2>
+                <canvas id="process-status-chart"></canvas>
+            </div>
+        </main>
+    </div>
+    
+    <script src="/js/admin-dashboard.js"></script>
+</body>
+</html>

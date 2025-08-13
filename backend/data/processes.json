@@ -1,0 +1,208 @@
+[
+  {
+    "id": 1,
+    "cliente_id": 4,
+    "etapas": [
+      {
+        "id": 1,
+        "nombre": "Sincronización hormonal",
+        "estado": "Pendiente",
+        "fecha_estimada": "",
+        "fecha_real": "",
+        "observaciones": ""
+      },
+      {
+        "id": 2,
+        "nombre": "Aspiración de ovocitos",
+        "estado": "Pendiente",
+        "fecha_estimada": "",
+        "fecha_real": "",
+        "observaciones": ""
+      },
+      {
+        "id": 3,
+        "nombre": "Transporte al laboratorio",
+        "estado": "Pendiente",
+        "fecha_estimada": "",
+        "fecha_real": "",
+        "observaciones": ""
+      },
+      {
+        "id": 4,
+        "nombre": "Maduración de ovocitos",
+        "estado": "Pendiente",
+        "fecha_estimada": "",
+        "fecha_real": "",
+        "observaciones": ""
+      },
+      {
+        "id": 5,
+        "nombre": "Fertilización in vitro",
+        "estado": "Pendiente",
+        "fecha_estimada": "",
+        "fecha_real": "",
+        "observaciones": ""
+      },
+      {
+        "id": 6,
+        "nombre": "Cultivo e incubación",
+        "estado": "Pendiente",
+        "fecha_estimada": "",
+        "fecha_real": "",
+        "observaciones": ""
+      },
+      {
+        "id": 7,
+        "nombre": "Evaluación de embriones",
+        "estado": "Pendiente",
+        "fecha_estimada": "",
+        "fecha_real": "",
+        "observaciones": ""
+      },
+      {
+        "id": 8,
+        "nombre": "Preparación de transporte",
+        "estado": "Pendiente",
+        "fecha_estimada": "",
+        "fecha_real": "",
+        "observaciones": ""
+      },
+      {
+        "id": 9,
+        "nombre": "Transporte de embriones",
+        "estado": "Pendiente",
+        "fecha_estimada": "",
+        "fecha_real": "",
+        "observaciones": ""
+      },
+      {
+        "id": 10,
+        "nombre": "Transferencia a receptoras",
+        "estado": "Pendiente",
+        "fecha_estimada": "",
+        "fecha_real": "",
+        "observaciones": ""
+      },
+      {
+        "id": 11,
+        "nombre": "Ecografía día 45",
+        "estado": "Pendiente",
+        "fecha_estimada": "",
+        "fecha_real": "",
+        "observaciones": ""
+      },
+      {
+        "id": 12,
+        "nombre": "Ecografía día 90",
+        "estado": "Pendiente",
+        "fecha_real": "",
+        "observaciones": ""
+      }
+    ],
+    "estado_global_manual": "Completado"
+  },
+  {
+    "id": 2,
+    "cliente_id": 5,
+    "etapas": [
+      {
+        "id": 1,
+        "nombre": "Sincronización hormonal",
+        "estado": "Completada",
+        "fecha_estimada": "",
+        "fecha_real": "2025-07-29",
+        "observaciones": "",
+        "fecha_inicio": "2025-07-29"
+      },
+      {
+        "id": 2,
+        "nombre": "Aspiración de ovocitos",
+        "estado": "Pendiente",
+        "fecha_estimada": "",
+        "fecha_real": "",
+        "observaciones": ""
+      },
+      {
+        "id": 3,
+        "nombre": "Transporte al laboratorio",
+        "estado": "Pendiente",
+        "fecha_estimada": "",
+        "fecha_real": "",
+        "observaciones": ""
+      },
+      {
+        "id": 4,
+        "nombre": "Maduración de ovocitos",
+        "estado": "Pendiente",
+        "fecha_estimada": "",
+        "fecha_real": "",
+        "observaciones": ""
+      },
+      {
+        "id": 5,
+        "nombre": "Fertilización in vitro",
+        "estado": "Pendiente",
+        "fecha_estimada": "",
+        "fecha_real": "",
+        "observaciones": ""
+      },
+      {
+        "id": 6,
+        "nombre": "Cultivo e incubación",
+        "estado": "Pendiente",
+        "fecha_estimada": "",
+        "fecha_real": "",
+        "observaciones": ""
+      },
+      {
+        "id": 7,
+        "nombre": "Evaluación de embriones",
+        "estado": "Pendiente",
+        "fecha_estimada": "",
+        "fecha_real": "",
+        "observaciones": ""
+      },
+      {
+        "id": 8,
+        "nombre": "Preparación de transporte",
+        "estado": "Pendiente",
+        "fecha_estimada": "",
+        "fecha_real": "",
+        "observaciones": ""
+      },
+      {
+        "id": 9,
+        "nombre": "Transporte de embriones",
+        "estado": "Pendiente",
+        "fecha_estimada": "",
+        "fecha_real": "",
+        "observaciones": ""
+      },
+      {
+        "id": 10,
+        "nombre": "Transferencia a receptoras",
+        "estado": "Pendiente",
+        "fecha_estimada": "",
+        "fecha_real": "",
+        "observaciones": ""
+      },
+      {
+        "id": 11,
+        "nombre": "Ecografía día 45",
+        "estado": "Pendiente",
+        "fecha_estimada": "",
+        "fecha_real": "",
+        "observaciones": ""
+      },
+      {
+        "id": 12,
+        "nombre": "Ecografía día 90",
+        "estado": "Pendiente",
+        "fecha_real": "",
+        "observaciones": ""
+      }
+    ],
+    "estado_global_manual": "Pendiente",
+    "estado_proceso": "Pendiente"
+  }
+]

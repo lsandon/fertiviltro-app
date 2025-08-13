@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Proceso</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Panel de Admin</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="/admin.html">Dashboard</a></li>
+                    <li><a href="/admin-users.html">Usuarios</a></li>
+                    <li><a href="/admin-clients.html">Clientes</a></li>
+                    <li><a href="/admin-processes.html" class="active">Procesos</a></li>
+                    <li><a href="/admin-claims.html">Reclamaciones</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="/index.html" id="logout-btn">Cerrar Sesión</a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <a href="/admin-processes.html">Volver a Procesos</a>
+            <h1>Detalles del Proceso</h1>
+            <div id="error-message"></div>
+
+            <div id="process-info"></div>
+
+            <h2>Línea de Tiempo del Proceso</h2>
+            <div id="timeline-container" class="timeline-container"></div>
+
+            <h2>Etapas</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Estado</th>
+                        <th>Fecha Estimada</th>
+                        <th>Fecha Real</th>
+                        <th>Observaciones</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="stage-list"></tbody>
+            </table>
+        </main>
+    </div>
+
+    <!-- Modal para Editar Etapa -->
+    <div id="edit-stage-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Editar Etapa</h3>
+            <form id="edit-stage-form">
+                <input type="hidden" id="edit-stage-process-id">
+                <input type="hidden" id="edit-stage-id">
+                
+                <div class="form-group">
+                    <label for="edit-stage-name">Nombre de Etapa</label>
+                    <input type="text" id="edit-stage-name" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="edit-stage-status">Estado</label>
+                    <select id="edit-stage-status">
+                        <option value="Pendiente">Pendiente</option>
+                        <option value="En Proceso">En Proceso</option>
+                        <option value="Completada">Completada</option>
+                        <option value="Cancelada">Cancelada</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="edit-stage-estimated-date">Fecha Estimada</label>
+                    <input type="date" id="edit-stage-estimated-date">
+                </div>
+                <div class="form-group">
+                    <label for="edit-stage-real-date">Fecha Real</label>
+                    <input type="date" id="edit-stage-real-date">
+                </div>
+                <div class="form-group">
+                    <label for="edit-stage-observations">Observaciones</label>
+                    <textarea id="edit-stage-observations"></textarea>
+                </div>
+                <button type="submit" class="btn">Guardar Cambios</button>
+            </form>
+        </div>
+    </div>
+
+    
+    <script src="/js/admin-process-details.js"></script>
+</body>
+</html>

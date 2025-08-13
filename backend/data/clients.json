@@ -1,0 +1,23 @@
+[
+  {
+    "id": 4,
+    "nombre": "Finca El Paraíso",
+    "estado_proceso": "Nuevo",
+    "telefono": "3201234567",
+    "email": "elparaiso@example.com"
+  },
+  {
+    "id": 5,
+    "nombre": "ganadero",
+    "email": "luissandon76@gmail.com",
+    "telefono": "3234205189",
+    "region": "Cundinamarca",
+    "municipio": "Caño claro",
+    "finca": "",
+    "tipo_cliente": "Individual",
+    "embriones_deseados": 0,
+    "receptoras_disponibles": 0,
+    "observaciones": "",
+    "estado_proceso": "Pendiente"
+  }
+]

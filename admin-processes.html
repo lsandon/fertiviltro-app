@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Procesos</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Panel de Admin</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="/admin.html">Dashboard</a></li>
+                    <li><a href="/admin-users.html">Usuarios</a></li>
+                    <li><a href="/admin-clients.html">Clientes</a></li>
+                    <li><a href="/admin-processes.html" class="active">Procesos</a></li>
+                    <li><a href="/admin-claims.html">Reclamaciones</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="/index.html" id="logout-btn">Cerrar Sesión</a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <h1>Panel de Administración - Procesos</h1>
+            <div id="error-message"></div>
+
+            <button id="create-process-btn" class="btn btn-primary mb-3">Crear Nuevo Proceso</button>
+
+            <h2>Todos los Procesos</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre del Cliente</th>
+                        <th>Estado General</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="process-list"></tbody>
+            </table>
+        </main>
+    </div>
+
+    <!-- Modal para Crear Proceso -->
+    <div id="create-process-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Crear Nuevo Proceso</h3>
+            <form id="create-process-form">
+                <div class="form-group">
+                    <label for="process-client">Cliente</label>
+                    <select id="process-client" required>
+                        <!-- Los clientes se cargarán aquí -->
+                    </select>
+                </div>
+                <button type="submit" class="btn">Crear Proceso</button>
+            </form>
+        </div>
+    </div>
+
+    
+    <script src="/js/admin-processes.js"></script>
+</body>
+</html>
