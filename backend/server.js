@@ -86,7 +86,15 @@ app.use(express.static(path.join(__dirname, '..')));
 
 // Ruta explícita para servir index.html en la raíz
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'index.html'));
+    const indexPath = path.join(__dirname, '..', 'index.html');
+    console.log(`Intentando servir index.html desde la ruta: ${indexPath}`);
+
+    res.sendFile(indexPath, (err) => {
+        if (err) {
+            console.error('ERROR AL ENVIAR index.html:', err);
+            res.status(404).send('Not Found'); // Enviar un 404 si no se encuentra
+        }
+    });
 });
 
 // Middleware to authenticate JWT token
