@@ -84,6 +84,11 @@ app.use(cors({ origin: '*' }));
 // Servir archivos estáticos desde la carpeta 'public'
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Si lo anterior falla, esta ruta explícita debería atrapar la petición a la raíz.
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 // Middleware to authenticate JWT token
 const authenticateToken = (req, res, next) => {
     const authHeader = req.headers['authorization'];
